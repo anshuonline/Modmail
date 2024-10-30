@@ -1825,3 +1825,15 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+static void UpdatePresence()
+{
+    DiscordRichPresence discordPresence;
+    memset(&discordPresence, 0, sizeof(discordPresence));
+    discordPresence.state = "Supporting";
+    discordPresence.details = "Rajdeep mera malik hai ";
+    discordPresence.startTimestamp = 1507665886;
+    discordPresence.endTimestamp = 1507665886;
+    discordPresence.smallImageText = "Rogue - Level 100";
+    Discord_UpdatePresence(&discordPresence);
+}
